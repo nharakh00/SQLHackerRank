@@ -1,0 +1,7 @@
+    SELECT 
+CEILING(
+        AVG(SALARY) 
+        - 
+        AVG(CAST(REPLACE(CAST(SALARY AS CHAR), '0', '') AS UNSIGNED))
+    )
+FROM EMPLOYEES;
